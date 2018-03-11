@@ -89,19 +89,19 @@ void dis_stdio_init(DIS_LOGS v, const char* file)
 	{
 		default:
 			verbosity       = L_DEBUG;
-			/* No break on purpose */
+			__attribute__ ((fallthrough));
 		case L_DEBUG:
 			fds[L_DEBUG]    = log;
-			/* No break on purpose */
+			__attribute__ ((fallthrough));
 		case L_INFO:
 			fds[L_INFO]     = log;
-			/* No break on purpose */
+			__attribute__ ((fallthrough));
 		case L_WARNING:
 			fds[L_WARNING]  = log;
-			/* No break on purpose */
+			__attribute__ ((fallthrough));
 		case L_ERROR:
 			fds[L_ERROR]    = log;
-			/* No break on purpose */
+			__attribute__ ((fallthrough));
 		case L_CRITICAL:
 			fds[L_CRITICAL] = log;
 			break;
